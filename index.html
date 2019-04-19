@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="UTF-8">
+    <head>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+      <link rel="stylesheet" href="style.css">
+    </head>
+    <title>Programmers toolbox</title>
+  </head>
+  <body>
+    <div class="dropdown">
+      <button onclick="myFunction()" class="dropbtn">Language</button>
+      <div id="myDropdown" class="dropdown-content">
+        <a href="cplus.html">C++</a>
+        <a href="java.html">Java</a>
+        <a href="#">C</a>
+      </div>
+    </div>
+    <!-- All of the Node.js APIs are available in this renderer process. -->
+    
+    <script>
+      // You can also require other files to run in this process
+      require('./renderer.js')
+      function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+      }
+
+      // Close the dropdown menu if the user clicks outside of it
+      window.onclick = function(event) {
+        if (!event.target.matches('.dropbtn')) {
+          var dropdowns = document.getElementsByClassName("dropdown-content");
+          var i;
+          for (i = 0; i < dropdowns.length; i++) {
+            var openDropdown = dropdowns[i];
+            if (openDropdown.classList.contains('show')) {
+              openDropdown.classList.remove('show');
+            }
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
