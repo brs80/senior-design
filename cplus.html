@@ -2,7 +2,6 @@
 <html>
 <meta charset="UTF-8">
   <head>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title color ="white">C++ Coding</title>
   </head>
@@ -10,8 +9,16 @@
   <body>
     <a href="index.html"><button class="dropbtn">Home</button></a>   
     <p>C++</p>
-    <input class="typeahead tt-query" spellcheck="false" autocomplete="off" name="typeahead" type="text"
-    />
+    
+  
+      <input type="button" id="syncBtn" value="Hello Sync">
+      <input type="button" id="asyncBtn" value="Hello aSync">
+      <div id="reply"></div>
+    <script>
+    
+    require('./renderer.js')  
+    </script>
+
   </body>
   
 </html>
