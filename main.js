@@ -1,6 +1,6 @@
 // Modules to control application life and create native browser window
 const {app, BrowserWindow} = require('electron')
-
+const ipc = require('electron').ipcMain;
 // Keep a global reference of the window object, if you don't, the window will
 // be closed automatically when the JavaScript object is garbage collected.
 let mainWindow
@@ -52,13 +52,13 @@ app.on('activate', function () {
 
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
-const ipc = require('electron').ipcMain;
+
 ipc.on('synMessage', (event, args) => {
  console.log(args);
- event.returnValue = 'Main said I received your Sync message';
+ event.returnValue = 'Main received your Sync message';
 });
 
 ipc.on('aSynMessage', (event, args) => {
  console.log(args);
- event.sender.send('asynReply','Main said: Async message received')
+ event.sender.send('asynReply','Main said: Async message received');
 });

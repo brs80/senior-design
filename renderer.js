@@ -15,8 +15,9 @@ syncBtn.addEventListener('click', () => {
  replyDiv.innerHTML = reply;
 });
 
-asyncBtn.addEventListener('click', () => {
- ipc.send('aSynMessage','A async message to main')
+asyncBtn.addEventListener('input', () => {
+ let replyaSync = document.getElementById('asyncBtn').value;
+ ipc.send('aSynMessage',replyaSync)
 });
 
 ipc.on('asynReply', (event, args) => {
