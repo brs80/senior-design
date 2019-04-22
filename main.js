@@ -54,6 +54,6 @@ app.on('activate', function () {
 // code. You can also put them in separate files and require them here.
 
 ipc.on('aSynMessage', (event, args) => {
- console.log(args);
+ //console.log(args);
  event.sender.send('asynReply',args);
 });

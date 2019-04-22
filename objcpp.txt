@@ -1,0 +1,6 @@
+class Rectangle {<br>
+&nbsp&nbsp    int width, height;<br>
+&nbsp  public:<br>
+&nbsp&nbsp    void set_values (int,int);<br>
+&nbsp&nbsp    int area (void);<br>
+} rect;<br>

@@ -1,0 +1,6 @@
+class Box {<br>
+&nbsp &nbsppublic:<br>
+&nbsp &nbsp		double length;   // Length of a box<br>
+&nbsp &nbsp		double breadth;  // Breadth of a box<br>
+&nbsp &nbsp		double height;   // Height of a box<br>
+};<br>
