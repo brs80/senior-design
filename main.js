@@ -53,12 +53,18 @@ app.on('activate', function () {
 // In this file you can include the rest of your app's specific main process
 // code. You can also put them in separate files and require them here.
 
-ipc.on('synMessage', (event, args) => {
- console.log(args);
- event.returnValue = 'Main received your Sync message';
-});
+
+// getReply generates a reply based on what the input is 
+function getReply(input) { 
+  if(input === 'brad') {
+    var temp = readFile();
+    return temp;
+  }
+  else return input;
+}
 
 ipc.on('aSynMessage', (event, args) => {
  console.log(args);
- event.sender.send('asynReply','Main said: Async message received');
+ //args = getReply(args);
+ event.sender.send('asynReply',args);
 });

@@ -6,20 +6,25 @@ ipc      = require('electron').ipcRenderer,
 
 syncBtn  = document.querySelector('#syncBtn'),
 asyncBtn = document.querySelector('#asyncBtn');
-
+const fs = require('fs')
 let replyDiv = document.querySelector('#reply');
-
-syncBtn.addEventListener('click', () => {
- let
- reply = ipc.sendSync('synMessage','A sync message to main');
- replyDiv.innerHTML = reply;
-});
 
 asyncBtn.addEventListener('input', () => {
  let replyaSync = document.getElementById('asyncBtn').value;
+ if(replyaSync === 'test') {
+ 	replyaSync = readFile()
+ }
  ipc.send('aSynMessage',replyaSync)
 });
 
 ipc.on('asynReply', (event, args) => {
- replyDiv.innerHTML = args;
+	replyDiv.innerHTML = args;
 });
+
+function readFile() {
+	var fs = require('fs');
+ 
+	var contents = fs.readFileSync('test.json', 'utf8');
+	return JSON.parse(contents)
+	console.log(contents);
+}
