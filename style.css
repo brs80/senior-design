@@ -5,6 +5,7 @@ html {
 p { 
   color: white;
 }
+
 .dropbtn {
   background-color: #3498DB;
   color: white;
@@ -13,7 +14,7 @@ p {
   border: none;
   cursor: pointer;
 }
-
+div { color:white; }
 a { 
   background-color: #3498DB;
   color: white;
@@ -57,3 +58,4 @@ a {
 
 /* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
 .show {display:block;}
+
