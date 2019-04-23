@@ -60,7 +60,54 @@ ipc.on('asynReply', (event, args) => {
 	replyDiv.innerHTML = args;
 });
 
+asyncBtnC = document.querySelector('#asyncBtnC')
+if(asyncBtnC) { 
+    asyncBtnC.addEventListener('input', () => {
+    let replyaSync = document.getElementById('asyncBtnC').value;
 
+     if(replyaSync === 'class' || replyaSync === 'Class')
+     {
+        replyaSync = readFile('data/classcpp.txt')
+     }
+     else if(replyaSync === 'int' || replyaSync === 'Int' || replyaSync === 'Integer')
+     {
+        replyaSync = readFile('data/intcpp.txt')
+     }
+     else if(replyaSync === 'str' || replyaSync === 'string' || replyaSync === 'String' || replyaSync === 'Str')
+     {
+        replyaSync = readFile('data/stringc.txt')
+     }
+     else if(replyaSync === 'obj' || replyaSync === 'object')
+     {
+        replyaSync = readFile('data/objcpp.txt')
+     }
+    else if(replyaSync === 'data' || replyaSync === 'data types')
+     {
+        replyaSync = readFile('data/datatypescpp.txt')
+     }
+    else if(replyaSync === 'Data' || replyaSync === 'Data types')
+     {
+        replyaSync = readFile('data/datatypescpp.txt')
+     }
+    else if(replyaSync === 'array' || replyaSync === 'Array')
+     {
+        replyaSync = readFile('data/arraycpp.txt')
+     }
+    else if(replyaSync === 'struct' || replyaSync === 'Struct')
+     {
+        replyaSync = readFile('data/structcpp.txt')
+     }
+    else if(replyaSync === 'vector' || replyaSync === 'Vector')
+     {
+        replyaSync = "no vectors in c"
+     }
+    else if(replyaSync === 'stack' || replyaSync === 'Stack')
+     {
+        replyaSync = readFile('data/stackc.txt')
+     }
+     ipc.send('aSynMessage',replyaSync)
+    });
+}
 
 let replyDivJava = document.querySelector('#replyJava');
 asyncBtnJava = document.querySelector('#asyncBtnJava');
