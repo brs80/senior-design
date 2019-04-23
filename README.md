@@ -1,5 +1,7 @@
 ### Code Helper
-### Will translate common coding nomenclature into actual syntax
+### Gives coding examples for given languages
+### Each page will have its own search bar, use this to find common coding examples
+
 Example: 
 Class -> class person
 		 {
@@ -7,3 +9,6 @@ Class -> class person
     		string name;
     		int age;
 		 };
+### examples taken from: 
+### geeksforgeeks.org
+### cplusplus.com
