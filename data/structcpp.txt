@@ -1,0 +1,7 @@
+struct product { <br>
+&nbsp  int weight;<br>
+&nbsp  double price;<br>
+};<br>
+
+product apple;<br>
+product banana, melon;<br>

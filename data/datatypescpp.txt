@@ -1,0 +1,17 @@
+<tbody>
+<tr>short int		-32,768 to 32,767</tr><br>
+<tr>unsigned short int		0 to 65,535</tr><br>
+<tr>unsigned int		0 to 4,294,967,295</tr><br>
+<tr>int		-2,147,483,648 to 2,147,483,647</tr><br>
+<tr>long int		-2,147,483,648 to 2,147,483,647</tr><br>
+<tr>unsigned long int		0 to 4,294,967,295</tr><br>
+<tr>long long int		-(2^63) to (2^63)-1</tr><br>
+<tr>unsigned long long int		0 to 18,446,744,073,709,551,615</tr><br>
+<tr>signed char		-128 to 127</tr><br>
+<tr>unsigned char		0 to 255</tr><br>
+<tr>float		</tr><br>
+<tr>double		</tr><br>
+<tr>bool</tr><br>
+<tr>long double	</tr><br>
+<tr>wchar_t	1 wide character</tr><br>
+</tbody>

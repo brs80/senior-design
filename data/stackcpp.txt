@@ -1,0 +1,37 @@
+// CPP program to demonstrate working of STL stack <br>
+#include <iostream> <br>
+#include <stack> <br>
+using namespace std; <br>
+ 
+void showstack(stack <int> s) <br>
+{ <br>
+&nbsp    while (!s.empty()) <br>
+&nbsp    { <br>
+&nbsp&nbsp        cout << '\t' << s.top(); <br>
+&nbsp&nbsp        s.pop(); <br>
+&nbsp    } <br>
+&nbsp    cout << '\n'; <br>
+} <br>
+  
+int main () <br>
+{ <br>
+&nbsp    stack <int> s; <br>
+&nbsp    s.push(10); <br>
+&nbsp    s.push(30); <br>
+&nbsp    s.push(20); <br>
+&nbsp    s.push(5); <br>
+&nbsp    s.push(1); <br>
+  
+&nbsp    cout << "The stack is : "; <br>
+&nbsp    showstack(s); <br>
+  
+&nbsp    cout << "\ns.size() : " << s.size(); <br>
+&nbsp    cout << "\ns.top() : " << s.top(); <br>
+  
+  
+&nbsp    cout << "\ns.pop() : "; <br>
+&nbsp    s.pop(); <br>
+&nbsp    showstack(s); <br>
+  
+&nbsp    return 0; <br>
+} 

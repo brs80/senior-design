@@ -1,0 +1,9 @@
+byte &nbsp −128 to 127<br>
+short &nbsp −32768 to 32767<br>
+int &nbsp 2,147,483,648 to 2,147,483,647<br>
+long &nbsp 9,223,372,036,854,775,808 to
+9,223,372,036,854,755,807<br>
+float &nbsp 3.4e−038 to 3.4e+038
+double &nbsp 1.7e−308 to 1.7e+038
+char &nbsp
+Boolean

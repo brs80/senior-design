@@ -1,0 +1,57 @@
+public class Dog 
+{<br> 
+&nbsp    // Instance Variables<br> 
+&nbsp    String name;<br> 
+&nbsp    String breed;<br> 
+&nbsp    int age;<br> 
+&nbsp    String color;<br> 
+<br>  
+&nbsp    // Constructor Declaration of Class<br> 
+&nbsp    public Dog(String name, String breed,<br> 
+&nbsp                   int age, String color)<br> 
+    { <br>
+&nbsp&nbsp        this.name = name; <br>
+&nbsp&nbsp        this.breed = breed;<br> 
+&nbsp&nbsp        this.age = age;<br> 
+&nbsp&nbsp        this.color = color;<br> 
+    }<br><br> 
+  
+&nbsp    // method 1<br> 
+&nbsp    public String getName() <br>
+&nbsp    { <br>
+&nbsp        return name;<br> 
+&nbsp    } <br>
+  
+    // method 2 <br>
+    public String getBreed() <br>
+    { <br>
+&nbsp        return breed; <br>
+    } <br>
+  
+    // method 3 <br>
+    public int getAge() <br>
+    { <br>
+&nbsp        return age; <br>
+    } <br>
+  
+    // method 4 <br>
+    public String getColor() <br>
+    { <br>
+&nbsp        return color; <br>
+    } <br>
+  
+    @Override<br>
+    public String toString()<br> 
+    { <br>
+&nbsp        return("Hi my name is "+ this.getName()+ <br>
+&nbsp&nbsp               ".\nMy breed,age and color are " + <br>
+&nbsp&nbsp               this.getBreed()+"," + this.getAge()+ <br>
+&nbsp&nbsp               ","+ this.getColor()); <br>
+    } <br>
+  <br>
+    public static void main(String[] args) <br>
+    { <br>
+&nbsp        Dog tuffy = new Dog("tuffy","papillon", 5, "white"); <br>
+&nbsp        System.out.println(tuffy.toString()); <br>
+    } <br>
+} <br>

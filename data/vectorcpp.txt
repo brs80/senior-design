@@ -1,0 +1,38 @@
+// C++ program to illustrate the <br>
+// capacity function in vector <br>
+<p>#include <pre>&lt;iostream&gt;</pre> <br></p>
+<p>#include <pre>&lt;vector&gt;</pre> <br></p>
+  
+using namespace std; <br>
+  
+int main() <br>
+{ <br>
+&nbsp    vector <pre>&lt;int&gt;</pre> g1; <br>
+  
+&nbsp    for (int i = 1; i <= 5; i++) <br>
+&nbsp&nbsp        g1.push_back(i); <br>
+  
+&nbsp    cout << "Size : " << g1.size(); <br>
+&nbsp    cout << "\nCapacity : " << g1.capacity(); <br>
+&nbsp    cout << "\nMax_Size : " << g1.max_size(); <br>
+  
+&nbsp    // resizes the vector size to 4 <br>
+&nbsp    g1.resize(4); <br>
+  
+&nbsp    // prints the vector size after resize() <br>
+&nbsp    cout << "\nSize : " << g1.size(); <br>
+  
+&nbsp    // checks if the vector is empty or not <br>
+&nbsp    if (g1.empty() == false) <br>
+&nbsp    &nbsp    cout << "\nVector is not empty"; <br>
+&nbsp    else<br>
+&nbsp    &nbsp    cout << "\nVector is empty"; <br>
+  
+&nbsp    // Shrinks the vector <br>
+&nbsp    g1.shrink_to_fit(); <br>
+&nbsp    cout << "\nVector elements are: "; <br>
+&nbsp    for (auto it = g1.begin(); it != g1.end(); it++) <br>
+&nbsp    &nbsp    cout << *it << " "; <br><br>
+  
+&nbsp    return 0; <br>
+} 

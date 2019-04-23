@@ -15,20 +15,44 @@ if(asyncBtnCpp) {
 
 	 if(replyaSync === 'class' || replyaSync === 'Class')
 	 {
-	 	replyaSync = readFile('classcpp.txt')
+	 	replyaSync = readFile('data/classcpp.txt')
 	 }
 	 else if(replyaSync === 'int' || replyaSync === 'Int' || replyaSync === 'Integer')
 	 {
-	 	replyaSync = readFile('intcpp.txt')
+	 	replyaSync = readFile('data/intcpp.txt')
 	 }
 	 else if(replyaSync === 'str' || replyaSync === 'string' || replyaSync === 'String' || replyaSync === 'Str')
 	 {
-	 	replyaSync = readFile('stringcpp.txt')
+	 	replyaSync = readFile('data/stringcpp.txt')
 	 }
 	 else if(replyaSync === 'obj' || replyaSync === 'object')
 	 {
-	 	replyaSync = readFile('objcpp.txt')
+	 	replyaSync = readFile('data/objcpp.txt')
 	 }
+    else if(replyaSync === 'data' || replyaSync === 'data types')
+     {
+        replyaSync = readFile('data/datatypescpp.txt')
+     }
+    else if(replyaSync === 'Data' || replyaSync === 'Data types')
+     {
+        replyaSync = readFile('data/datatypescpp.txt')
+     }
+    else if(replyaSync === 'array' || replyaSync === 'Array')
+     {
+        replyaSync = readFile('data/arraycpp.txt')
+     }
+    else if(replyaSync === 'struct' || replyaSync === 'Struct')
+     {
+        replyaSync = readFile('data/structcpp.txt')
+     }
+    else if(replyaSync === 'vector' || replyaSync === 'Vector')
+     {
+        replyaSync = readFile('data/vectorcpp.txt')
+     }
+    else if(replyaSync === 'stack' || replyaSync === 'Stack')
+     {
+        replyaSync = readFile('data/stackcpp.txt')
+     }
 	 ipc.send('aSynMessage',replyaSync)
 	});
 }
@@ -46,23 +70,36 @@ if(asyncBtnJava) {
 	 let replyaSyncJava = document.getElementById('asyncBtnJava').value;
 	 if(replyaSyncJava === 'class' || replyaSyncJava === 'Class')
 	 {
-	 	replyaSyncJava = readFile('classcpp.txt')
+	 	replyaSyncJava = readFile('data/classjava.txt')
 	 }
 	 else if(replyaSyncJava === 'int' || replyaSyncJava === 'Int' || replyaSyncJava === 'Integer')
 	 {
-	 	replyaSyncJava = readFile('intcpp.txt')
+	 	replyaSyncJava = readFile('data/intjava.txt')
 	 }
 	 else if(replyaSyncJava === 'str' || replyaSyncJava === 'string' || replyaSyncJava === 'String' || replyaSyncJava === 'Str')
 	 {
-	 	replyaSyncJava = readFile('stringcpp.txt')
+	 	replyaSyncJava = readFile('data/stringjava.txt')
 	 }
 	 else if(replyaSyncJava === 'obj' || replyaSyncJava === 'object')
 	 {
-	 	replyaSyncJava = readFile('objcpp.txt')
+	 	replyaSyncJava = readFile('data/objjava.txt')
 	 }
+     else if(replyaSyncJava === 'data' || replyaSyncJava === 'data types')
+     {
+        replyaSyncJava = readFile('data/datatypesjava.txt')
+     }
+     else if(replyaSyncJava === 'Data' || replyaSyncJava === 'Data types')
+     {
+        replyaSyncJava = readFile('data/datatypesjava.txt')
+     }
+    else if(replyaSyncJava === 'array' || replyaSyncJava === 'Array')
+     {
+        replyaSyncJava = readFile('data/arrayjava.txt')
+     }
 	 ipc1.send('aSynMessageJava',replyaSyncJava)
 	});
-	}
+}
+
 ipc1.on('asynReplyJava', (event, args) => {
 	replyDivJava.innerHTML = args;
 });
