@@ -3,7 +3,8 @@
 ### Each language has it's own view and search bar.
 ### Example (inside C++ view): 
 ### Input: class 
-### Output: 
+### Output:
+
 class Box { 
 
    public:  
@@ -13,16 +14,9 @@ class Box {
    	double breadth; // Breadth of a box  
 
    	double height; // Height of a box  
-   	
+
 };  
   
-Example: 
-Class -> class person
-		 {
-  		  public:
-    		string name;
-    		int age;
-		 };
 ### examples taken from: 
 ### geeksforgeeks.org
 ### cplusplus.com
