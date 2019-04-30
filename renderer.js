@@ -13,19 +13,23 @@ if(asyncBtnCpp) {
     asyncBtnCpp.addEventListener('input', () => {
     let replyaSync = document.getElementById('asyncBtnCpp').value;
 
-	 if(replyaSync === 'class' || replyaSync === 'Class')
+    if(replyaSync === 'array' || replyaSync === 'Array')
+     {
+        replyaSync = readFile('data/arraycpp.txt')
+     }
+	else if(replyaSync === 'class' || replyaSync === 'Class')
 	 {
 	 	replyaSync = readFile('data/classcpp.txt')
 	 }
-	 else if(replyaSync === 'int' || replyaSync === 'Int' || replyaSync === 'Integer')
+	else if(replyaSync === 'int' || replyaSync === 'Int' || replyaSync === 'Integer')
 	 {
 	 	replyaSync = readFile('data/intcpp.txt')
 	 }
-	 else if(replyaSync === 'str' || replyaSync === 'string' || replyaSync === 'String' || replyaSync === 'Str')
+	else if(replyaSync === 'str' || replyaSync === 'string' || replyaSync === 'String' || replyaSync === 'Str')
 	 {
 	 	replyaSync = readFile('data/stringcpp.txt')
 	 }
-	 else if(replyaSync === 'obj' || replyaSync === 'object')
+	else if(replyaSync === 'obj' || replyaSync === 'object')
 	 {
 	 	replyaSync = readFile('data/objcpp.txt')
 	 }
@@ -37,9 +41,10 @@ if(asyncBtnCpp) {
      {
         replyaSync = readFile('data/datatypescpp.txt')
      }
-    else if(replyaSync === 'array' || replyaSync === 'Array')
+    else if(replyaSync === 'fib' || replyaSync === 'Fib'
+            || replyaSync === 'Fibonacci' || replyaSync === 'fibonacci')
      {
-        replyaSync = readFile('data/arraycpp.txt')
+        replyaSync = readFile('data/fibcpp.txt')
      }
     else if(replyaSync === 'struct' || replyaSync === 'Struct')
      {
@@ -131,6 +136,11 @@ if(asyncBtnJava) {
 	 {
 	 	replyaSyncJava = readFile('data/objjava.txt')
 	 }
+     else if(replyaSyncJava === 'fib' || replyaSyncJava === 'Fibonacci'
+                || replyaSyncJava === 'fibonacci' ||  replyaSyncJava === 'Fib')
+     {
+        replyaSyncJava = readFile('data/fibjava.txt')
+     }
      else if(replyaSyncJava === 'data' || replyaSyncJava === 'data types')
      {
         replyaSyncJava = readFile('data/datatypesjava.txt')
@@ -151,20 +161,9 @@ ipc1.on('asynReplyJava', (event, args) => {
 	replyDivJava.innerHTML = args;
 });
 
-function replyFile(input)  { }
 function readFile(fileName) {
 	var fs = require('fs');
 	var contents = fs.readFileSync(fileName, 'utf8');
-	var temp = contents.split('\n')
-
-	for(var i in temp) {
-		//temp[i] = temp[i] + "<br>"
-		var noCommas = String(temp[i])
-		var newchar = ' '
-		noCommas = temp[i].split(',').join(newchar);
-		console.log(temp[i]);
-	}
-	var finalMessage = String(temp)
 	
 	return contents
 }

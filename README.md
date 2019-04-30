@@ -1,7 +1,13 @@
 # Code Helper
 ## Responds to user input with syntax on a given language.
-### Each language has it's own view and search bar.
-### Example inside C++ view: 
+
+## Install (must in package.json directory)
+## npm install 
+
+## Run 
+## npm start
+
+### Example inside the C++ view: 
 ### Input: class 
 ### Output:
 
