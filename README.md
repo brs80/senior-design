@@ -18,6 +18,3 @@
 #####  			double height; // Height of a box  
 #####	};  
   
-### examples taken from: 
-### geeksforgeeks.org
-### cplusplus.com
